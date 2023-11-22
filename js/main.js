@@ -74,6 +74,33 @@ function sortArr(arr, property, ...args) {
 }
 
 /**
+ * Bonus - Functions
+ */
+const submitBtn = document.getElementById("submitBtn");
+
+submitBtn.addEventListener("click", function (event) {
+    event.preventDefault();
+    let brand = document.getElementById("inputBrand").value;
+    let model = document.getElementById("inputModel").value;
+    let fuel = document.getElementById("inputFuel").value;
+
+    let htmlCarInfo = brand + '&emsp;' + model + '&emsp;' + fuel + '&emsp;'
+
+
+    document.getElementById("mainContainer").innerHTML += `
+        <!-- CAR ??? -->
+        <div class="col col-sm-6 col-md-6 col-lg-4">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h6 class="card-title">CAR ???</h6>
+                    <p class="card-text">${htmlCarInfo} </p>
+                </div>
+            </div>
+        </div>
+        `
+})
+
+/**
  * Other functions
  */
 

@@ -24,8 +24,40 @@
         <h1>This is a template</h1>
         <div class="container">
             <div class="row row-cols-1 row-cols-md-3 g-4 pb-5" id="mainContainer">
-                
+
             </div>
+
+            <form class="row g-2">
+                <!-- BRAND INPUT -->
+                <div class="col-md">
+                    <label for="inputBrand" class="form-label">Brand</label>
+                    <input type="text" class="form-control" id="inputBrand">
+                </div>
+
+                <!-- MODEL INPUT -->
+                <div class="col-md">
+                    <label for="inputModel" class="form-label">Model</label>
+                    <input type="text" class="form-control" id="inputModel">
+                </div>
+
+                <!-- FUEL INPUT -->
+                <div class="col-md">
+                    <label for="inputFuel" class="form-label">Fuel</label>
+                    <select class="form-select" id="inputFuel">
+                        <option selected>Select the fuel</option>
+                        <option value="fuel1">Fuel 1</option>
+                        <option value="fuel2">Fuel 2</option>
+                        <option value="fuel3">Fuel 3</option>
+                        <option value="fuel4">Fuel 4</option>
+                        <option value="fuel5">Fuel 5</option>
+                    </select>
+                </div>
+
+                <div class="col-md-12 text-center">
+                    <button type="submit" class="btn btn-primary my-3" id="submitBtn">Submit</button>
+                </div>
+            </form>
+
         </div>
     </main>
 
