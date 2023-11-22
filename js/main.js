@@ -20,7 +20,9 @@ let otherCars = sortArr(cars, carKeys.fuelKey, "fuel 3", "fuel 4", "fuel 5")
 /** Bonus */
 cars.forEach((car, index) => {
     let htmlCarInfo = ''
-    Object.values(carKeys).forEach(carKey => {
+    arrOfValues = Object.values(carKeys)
+
+    arrOfValues.forEach(carKey => {
         htmlCarInfo += car[carKey] + '&emsp;'
     })
 
@@ -37,9 +39,16 @@ cars.forEach((car, index) => {
         `
 })
 
-
 /**
  * 1 - Functions
+ */
+
+/**
+ * Given three
+ * @param {*} brand 
+ * @param {*} model 
+ * @param {*} fuel 
+ * @returns 
  */
 function createCar(brand, model, fuel) {
     const car = {
@@ -50,6 +59,13 @@ function createCar(brand, model, fuel) {
     return car;
 }
 
+/**
+ * 
+ * @param {*} length lenght of the array of object.
+ * @param {*} func function which, providing the arguments, creates an object.
+ * @param  {...any} args parameter values to pass to the function.
+ * @returns 
+ */
 function getArr(length, func, ...args) {
     let arr = []
     for (let i = 0; i < length; i++) {
@@ -86,7 +102,6 @@ submitBtn.addEventListener("click", function (event) {
 
     let htmlCarInfo = brand + '&emsp;' + model + '&emsp;' + fuel + '&emsp;'
 
-
     document.getElementById("mainContainer").innerHTML += `
         <!-- CAR ??? -->
         <div class="col col-sm-6 col-md-6 col-lg-4">
@@ -115,6 +130,3 @@ function printCars() {
     console.log("Array with other cars: ")
     console.log(otherCars)
 }
-
-
-
