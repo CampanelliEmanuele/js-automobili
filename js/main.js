@@ -28,6 +28,32 @@ function getArr(length, func, ...args) {
     return arr
 }
 
+/* 2 - Array filtering */
+
+let petrolCars = sortArr(cars, fuelKey, "fuel 1")
+let diselCars = sortArr(cars, fuelKey, "fuel 2")
+let otherCars = sortArr(cars, fuelKey, "fuel 3", "fuel 4", "fuel 5")
+
+/* 2 - Functions */
+
+function sortArr(arr, property, ...args) {
+    let res = []
+    arr.forEach((element) => {
+        let condition = Object.values(args).includes(element[fuelKey])
+        if (condition) {
+            res.push(element)
+        }
+    })
+    return res
+}
+
+console.log("Array with petrol cars: ")
+console.log(petrolCars)
+console.log("Array with disel cars: ")
+console.log(diselCars)
+console.log("Array with other cars: ")
+console.log(otherCars)
+
 
 
 
