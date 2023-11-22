@@ -24,6 +24,6 @@ Infine stampa separatamente i 3 array.
 
 ## Bonus
 
-Stampare queste 3 liste nell'index HTML (scegliete voi il layout più appropriato rispulciando la documentazione di Bootstrap oppure facendo 3 sezioni separate)
+- Stampare queste 3 liste nell'index HTML (scegliete voi il layout più appropriato rispulciando la documentazione di Bootstrap oppure facendo 3 sezioni separate)
 
-Fatevi un piccolo form per aggiungere una nuova auto e aggiungetela alla lista/sezione corrispondente. (Visionate il live coding di questa mattina e provare se volete a vedere il comportamente dell'istruzione debug;)
+- Fatevi un piccolo form per aggiungere una nuova auto e aggiungetela alla lista/sezione corrispondente. (Visionate il live coding di questa mattina e provare se volete a vedere il comportamente dell'istruzione debug;)
