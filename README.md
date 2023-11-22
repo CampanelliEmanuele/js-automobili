@@ -1,6 +1,6 @@
 - [js-automobili](#js-automobili)
   - [Consegna](#consegna)
-    - [BONUS](#bonus)
+  - [Bonus](#bonus)
 
 # js-automobili
 
@@ -22,7 +22,7 @@ Dividi le automobili in 3 array separati:
 
 Infine stampa separatamente i 3 array.
 
-### BONUS
+## Bonus
 
 Stampare queste 3 liste nell'index HTML (scegliete voi il layout più appropriato rispulciando la documentazione di Bootstrap oppure facendo 3 sezioni separate)
 
