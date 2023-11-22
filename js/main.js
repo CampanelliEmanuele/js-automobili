@@ -39,7 +39,7 @@ let otherCars = sortArr(cars, fuelKey, "fuel 3", "fuel 4", "fuel 5")
 function sortArr(arr, property, ...args) {
     let res = []
     arr.forEach((element) => {
-        let condition = Object.values(args).includes(element[fuelKey])
+        let condition = Object.values(args).includes(element[property])
         if (condition) {
             res.push(element)
         }
