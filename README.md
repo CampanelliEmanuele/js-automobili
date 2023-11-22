@@ -1,21 +1,29 @@
-- [html-css-js-template](#html-css-js-template)
-  - [Consegna base](#consegna-base)
-  - [Consegna bonus](#consegna-bonus)
-  - [Svolgimento base](#svolgimento-base)
-    - [Pagina da replicare](#pagina-da-replicare)
-    - [Analisi tecnica](#analisi-tecnica)
-    - [Risultato ottenuto](#risultato-ottenuto)
+- [js-automobili](#js-automobili)
+  - [Consegna](#consegna)
+    - [BONUS](#bonus)
 
-# html-css-js-template
+# js-automobili
 
-## Consegna base
+## Consegna
 
-## Consegna bonus
+Crea un array composto da 10 automobili.
 
-## Svolgimento base
+Ogni oggetto automobile avrà le seguenti proprietà:
 
-### [Pagina da replicare](./img/screenshot/exercise/)
+- marca
+- modello
+- alimentazione (benzina, diesel, elettrica, ibrida, gpl).
 
-### [Analisi tecnica](./img/screenshot/analysis/)
+Dividi le automobili in 3 array separati:
 
-### [Risultato ottenuto](./index.html)
+- nel primo array solo le auto a benzina,
+- nel secondo solo le auto a diesel,
+- nel terzo il resto delle auto.
+
+Infine stampa separatamente i 3 array.
+
+### BONUS
+
+Stampare queste 3 liste nell'index HTML (scegliete voi il layout più appropriato rispulciando la documentazione di Bootstrap oppure facendo 3 sezioni separate)
+
+Fatevi un piccolo form per aggiungere una nuova auto e aggiungetela alla lista/sezione corrispondente. (Visionate il live coding di questa mattina e provare se volete a vedere il comportamente dell'istruzione debug;)
