@@ -8,7 +8,7 @@ const carKeys = {
 const numOfBrands = 5, numOfModels = 10, numOfFuels = 5
 
 /** 1 - Array of cars creation */
-cars = getArr(10, createCar, "brand", "model", "fuel")
+cars = getArr(10, createCar, "brand", "model", "fuel", true)
 
 /** 2 - Array filtering */
 let petrolCars = sortArr(cars, carKeys.fuelKey, "fuel 1")
@@ -50,11 +50,16 @@ cars.forEach((car, index) => {
  * @param {*} fuel 
  * @returns 
  */
-function createCar(brand, model, fuel) {
+function createCar(brand, model, fuel, random) {
     const car = {
-        [carKeys.brandKey]: brand + ' ' + Math.floor(Math.random() * numOfBrands + 1),
-        [carKeys.modelKey]: model + ' ' + Math.floor(Math.random() * numOfModels + 1),
-        [carKeys.fuelKey]: fuel + ' ' + Math.floor(Math.random() * numOfFuels + 1)
+        [carKeys.brandKey]: brand,
+        [carKeys.modelKey]: model,
+        [carKeys.fuelKey]: fuel
+    }
+    if (random) {
+        car[carKeys.brandKey] += ' ' + Math.floor(Math.random() * numOfBrands + 1)
+        car[carKeys.modelKey] += ' ' + Math.floor(Math.random() * numOfModels + 1)
+        car[carKeys.fuelKey] += ' ' + Math.floor(Math.random() * numOfFuels + 1)
     }
     return car;
 }
