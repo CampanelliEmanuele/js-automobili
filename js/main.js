@@ -18,26 +18,7 @@ let otherCars = sortArr(cars, carKeys.fuelKey, "fuel 3", "fuel 4", "fuel 5")
 // printCarsOnConsole()
 
 /** Bonus */
-cars.forEach((car, index) => {
-    let htmlCarInfo = ''
-    arrOfValues = Object.values(carKeys)
-
-    arrOfValues.forEach(carKey => {
-        htmlCarInfo += car[carKey] + '&emsp;'
-    })
-
-    document.getElementById("mainContainer").innerHTML += `
-        <!-- CAR ${index + 1} -->
-        <div class="col col-sm-6 col-md-6 col-lg-4">
-            <div class="card text-center">
-                <div class="card-body">
-                    <h6 class="card-title">CAR ${index + 1}</h6>
-                    <p class="card-text">${htmlCarInfo}</p>
-                </div>
-            </div>
-        </div>
-        `
-})
+printCars()
 
 /**
  * 1 - Functions
@@ -127,6 +108,8 @@ submitBtn.addEventListener("click", function (event) {
     let brand = document.getElementById("inputBrand").value;
     let model = document.getElementById("inputModel").value;
     let fuel = document.getElementById("inputFuel").value;
+
+    printCars()
 
     let htmlCarInfo = brand + '&emsp;' + model + '&emsp;' + fuel + '&emsp;'
 
