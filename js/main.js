@@ -25,10 +25,11 @@ printCars()
  */
 
 /**
- * Given three
- * @param {*} brand 
- * @param {*} model 
- * @param {*} fuel 
+ * Can generate a custom or random car.
+ * @param {string} brand the fuel brand of the car
+ * @param {string} model the fuel model of the car
+ * @param {string} fuel the fuel value of the car
+ * @param {boolean} random if true a random car will be generated, otherwise not.
  * @returns 
  */
 function createCar(brand, model, fuel, random) {
@@ -48,7 +49,7 @@ function createCar(brand, model, fuel, random) {
 /**
  * 
  * @param {*} length lenght of the array of object.
- * @param {*} func function which, providing the arguments, creates an object.
+ * @param {*} func function which, providing the arguments (args), creates an object.
  * @param  {...any} args parameter values to pass to the function.
  * @returns 
  */
@@ -64,11 +65,20 @@ function getArr(length, func, ...args) {
 /**
  * 2 - Functions
  */
-function sortArr(arr, property, ...args) {
+
+/**
+ * Given an array, a property to check during the array scrolling, and the values which will be searched across the properties of the array's (iterated) object 
+ * @param {*} arr array to sort.
+ * @param {string} propertyToCheck property (of the iterated object of the array) to check.
+ * @param  {...any} args is the list of the values to search that will make the filter.
+ * @returns 
+ */
+function sortArr(arr, propertyToCheck, ...args) {
     let res = []
     arr.forEach((element) => {
-        let condition = Object.values(args).includes(element[property])
-        if (condition) {
+        let arrOfValues = Object.values(args)
+        let canPush = arrOfValues.includes(element[propertyToCheck]) /* Check if the array contains the element: element[property] */
+        if (canPush) {
             res.push(element)
         }
     })
