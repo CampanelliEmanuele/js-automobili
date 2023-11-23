@@ -78,7 +78,8 @@ function sortArr(arr, property, ...args) {
 /**
  * Bonus - Functions
  */
-function printCars() {
+function printCarsOnHtml() {
+    document.getElementById("mainContainer").innerHTML = ''
     cars.forEach((car, index) => {
         let htmlCarInfo = ''
         arrOfValues = Object.values(carKeys)
@@ -109,22 +110,10 @@ submitBtn.addEventListener("click", function (event) {
     let model = document.getElementById("inputModel").value;
     let fuel = document.getElementById("inputFuel").value;
 
-    printCars()
+    let newCar = createCar(brand, model, fuel, false)
+    cars.push(newCar)
 
-    let htmlCarInfo = brand + '&emsp;' + model + '&emsp;' + fuel + '&emsp;'
-
-    document.getElementById("mainContainer").innerHTML += `
-        <!-- CAR ??? -->
-        <div class="col col-sm-6 col-md-6 col-lg-4">
-            <div class="card text-center">
-                <div class="card-body">
-                    <h6 class="card-title">CAR ???</h6>
-                    <p class="card-text">${htmlCarInfo} </p>
-                </div>
-            </div>
-        </div>
-        `
-
+    printCarsOnHtml()
 })
 
 /**
