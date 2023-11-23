@@ -15,7 +15,7 @@ let petrolCars = sortArr(cars, carKeys.fuelKey, "fuel 1")
 let diselCars = sortArr(cars, carKeys.fuelKey, "fuel 2")
 let otherCars = sortArr(cars, carKeys.fuelKey, "fuel 3", "fuel 4", "fuel 5")
 
-// printCars()
+// printCarsOnConsole()
 
 /** Bonus */
 cars.forEach((car, index) => {
@@ -92,6 +92,29 @@ function sortArr(arr, property, ...args) {
 /**
  * Bonus - Functions
  */
+function printCars() {
+    cars.forEach((car, index) => {
+        let htmlCarInfo = ''
+        arrOfValues = Object.values(carKeys)
+
+        arrOfValues.forEach(carKey => {
+            htmlCarInfo += car[carKey] + '&emsp;'
+        })
+
+        document.getElementById("mainContainer").innerHTML += `
+        <!-- CAR ${index + 1} -->
+        <div class="col col-sm-6 col-md-6 col-lg-4">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h6 class="card-title">CAR ${index + 1}</h6>
+                    <p class="card-text">${htmlCarInfo}</p>
+                </div>
+            </div>
+        </div>
+        `
+    })
+}
+
 const submitBtn = document.getElementById("submitBtn");
 
 submitBtn.addEventListener("click", function (event) {
@@ -113,13 +136,14 @@ submitBtn.addEventListener("click", function (event) {
             </div>
         </div>
         `
+
 })
 
 /**
  * Other functions
  */
 
-function printCars() {
+function printCarsOnConsole() {
     console.log("Array with 10 cars: ")
     console.log(cars)
 
