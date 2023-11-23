@@ -20,9 +20,7 @@ let otherCars = sortArr(cars, carKeys.fuelKey, "fuel 3", "fuel 4", "fuel 5")
 /** Bonus */
 printCars()
 
-/**
- * 1 - Functions
- */
+////////////////////////////////////////////// Part 1 - Functions //////////////////////////////////////////////
 
 /**
  * Can generate a custom or random car.
@@ -62,9 +60,7 @@ function getArr(length, func, ...args) {
     return arr
 }
 
-/**
- * 2 - Functions
- */
+////////////////////////////////////////////// Part 2 - Functions //////////////////////////////////////////////
 
 /**
  * Given an array, a property to check during the array scrolling, and the values which will be searched across the properties of the array's (iterated) object 
@@ -85,9 +81,8 @@ function sortArr(arr, propertyToCheck, ...args) {
     return res
 }
 
-/**
- * Bonus - Functions
- */
+////////////////////////////////////////////// Part Bonus - Functions //////////////////////////////////////////////
+
 function printCarsOnHtml() {
     document.getElementById("mainContainer").innerHTML = ''
     cars.forEach((car, index) => {
@@ -126,9 +121,7 @@ submitBtn.addEventListener("click", function (event) {
     printCarsOnHtml()
 })
 
-/**
- * Other functions
- */
+////////////////////////////////////////////// Other Functions //////////////////////////////////////////////
 
 function printCarsOnConsole() {
     console.log("Array with 10 cars: ")
